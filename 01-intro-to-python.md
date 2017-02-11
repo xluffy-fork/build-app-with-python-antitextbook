@@ -1,50 +1,51 @@
-# Introduction
+# Giới thiệu
 
-[Watch on YouTube](https://www.youtube.com/watch?v=7wuKDDMb3R4)
+[Xem trên YouTube](https://www.youtube.com/watch?v=7wuKDDMb3R4)
 
-Python is an open source, cross platform, interpreted language. Since it is open source, you can distribute the language in any commercial software, since it is cross platform, you can write programs on Mac and they'll run exactly the same way on any other platform which Python supports. 
+Python là một ngôn ngữ nguồn mở, đa nền tảng và thông dịch. Bởi vì nó là ngôn ngữ nguồn mở, nên bạn có thể sử dụng ngôn ngữ này trong bất kỳ phần mềm thương mại nào, và bởi vì nó đa nền tảng nên bạn có thể viết các chương trình chạy trên Mac và nó cũng sẽ chạy chính xác trên các nền tảng khác hỗ trợ Python.
 
-Python has been around for more than 30 years and that is the reason there are many third party packages available, it is advisable to check out http://pypi.python.org before you start writing your package, because the changes are that someone already has written a package for that. There are millions of Python programmers out there, and python can be used for doing virtually anything, YouTube, Quora, Hulu are just a few platforms written in Python. We can write command line applications, linux's bootloader is written in Python, we can write webapps, front end apps and just about everything that you want to build.
+Python ra đời đã hơn 30 năm và đó là lý do mà nó có sẵn rất nhiều các gói hỗ trợ của bên thứ 3. Nó cũng khuyến khích kiểm tra tại http://pypi.python.org trước khi bắt đầu viết gói của riêng bạn, bởi vì có thể đã có một ai đó viết một gói tương tự. Có hàng triệu lập trình viên Python trên đây, và python có thể làm hầu như bất cứ điều gì, Youtube, Quora, Hulu chỉ là vài nền tảng viết bằng Python. Với Python chúng ta có thể viết ứng dụng command-line, linux bootloader, tới các ứng dụng web, ứng dụng frontend và tất cả mọi thứ mà bạ muốn
 
-Python is dynamic typed language, which means that you don't have to define the data type of an object. It is a fully object oriented language. Because of it's English like syntax, Python makes for an excellent prototyping language, any program implemented in Python has significantly less number of lines as compared to Java, but because it is a dynamically typed language, it is somewhat difficult to debug the programs written in Python or we need to be extra careful while writing them. The reason for that is if you have a 100 line program and you define `i=1` at the first line and by mistake you do `i = '1'` somewhere in between the lines, then it won't complain that `i is an integer you can't assign string to it`, it'll just run the rest of the code assuming the new value of i.
+Python là một ngôn ngữ kiểu động, điều đó nghĩa là bạn không phải định nghĩa kiểu dữ liệu của một đối tượng. Nó là một ngôn ngữ hướng đối tượng hoàn toàn. Bởi vì nó có cú pháp tương tự tiếng Anh, Python tạo ra một ngôn ngữ mẫu tuyệt vời, bất kỳ chương trình gì được phát triển bằng Python có số dòng ít hơn đáng kể so với Java, nhưng bởi vì nó là ngôn ngữ kiểu động nên việc gỡ lỗi (debug) trong chương trình viết bằng Python sẽ hơi khó hoặc chúng ta sẽ phải cẩn thận trong quá trình viết. Lí do cho điều đó là nếu bạn có một chương trình có 100 dòng, và bạn định nghĩa `i=1` tại dòng đầu tiên, nhưng sau đó bạn nhầm lẫn khi khai báo `i = '1'` ở một nơi nào đó giữa các dòng, nó sẽ không phàn nàn `i là một số nguyên và bạn không thể gán một chuỗi cho nó`, nó sẽ chỉ chạy phần còn lại của chương trình với giá trị mới của i.
 
-Along with this, what makes Python powerful is the presence of high level data structures like hashmaps, sets, lists.
+Cũng vì điều này mà nó làm cho Python trở nên mạnh mẽ với sự hiện diện của các cấu trúc dữ liệu cấp cao như hashmaps, sets và lists.
 
-## Python 2 vs Python3
+## Python 2 với Python3
 
-Python3 is the successor of Python2. In 2020 Python2 will be history. This tutorial is based on Python3 as it is the present and future of the language. The reason why they created python3 was that there were some shortcomings to the python language which weren't addressed for almost 30yrs and now, the authors decided that they should address them, while addressing them, it occurred to them that they have to create backwards incompatible changes to the language and thus python3 was created. If you write programs in Python3, there is no guarantee that it'll work in Python2, same is true vice versa, if you want your programs to work in both Python2 and Python3, then you have to write them specifically to run in both versions. It is beyond the scope of this tutorial, but you will find  lots of resources on the Internet which teach you how to write programs compatible with both versions.
+Python3 là sự kế thừa của Python2. Tới 2020 Python2 sẽ trở thành lịch sử. Hướng dẫn này dựa trên Python3 vì nó là hiện tại và tương lai của ngôn ngữ này. Lý do tại sao họ tạo ra python3 là đã có một vài thiếu sót trong ngôn ngữ python mà không được đề cập trong suốt 30 năm và bây giờ, các tác giả của python đã quyết định họ nên giải quyết chúng, trong khi giải quyết các vấn đề đó, nó sẽ phải tương thích ngược với ngôn ngữ và python3 được tạo ra. Nếu bạn viết một chương trình trong Python3, không có gì đảm bảo nó sẽ chạy trong Python2 và ngược lại, nếu bạn muốn chương trình của bạn làm việc trên cả Python2 và Python3 bạn sẽ phải viết nó một cách đặc biệt để chạy cả 2 phiên bản. Nó không thuộc phạm vi của hướng dẫn này, nhưng bạn sẽ tìm được nhiều nguồn tài liệu trên Internet dạy bạn làm cách nào để viết chương trình tương thích với cả hai phiên bản.
 
-## Installation
+## Cài đặt
 
-If you are on Windows, please go to https://python.org and download the latest .exe file of Python3. For Android, please download TermUX (https://termux.com/help.html). If you are on Mac (brew install python3), if you are on Linux, depending on your distro (apt-get install python3 or yum install python3)
+Nếu bạn dùng Windows, vui lòng truy cập https://python.org và download phiên bản .ext mới nhất của Python3. Với Android, vui lòng download TermUX (https://termux.com/help.html). Nếu bạn dùng Mac (brew install python3), nếu bạn dùng Linux thì tùy thuộc vào bản phân phối của bạn (apt-get install python3 or yum install python3)
 
-Enough theory.
+Lý thuyết đã đủ, bây giờ bắt đầu với các ví dụ.
 
-Let's write programs now. Make sure you have Python installed.
+Bắt đầu viết một chương trình. Đảm bảo rằng bạn đã cài đặt Python.
 
-## Example: List all `*.txt` files
-We are going to print the list of all files which end with '.txt'.
+## Ví dụ: Liệt kê tất cả các tập tin `*.txt`
+Chúng ta sẽ in một danh sách của tất cả các tập tin kết thúc với '.txt'.
 
-#### Note:
+#### Lưu ý:
 
-Python doesn't use semi colons or braces for control flow of the programs, it uses **indentation**. It is mandatory to use indentation if you are using a `for`, `while`, `if` loop.
+Python không sử dụng dấu chấm phẩi hoặc ngoặc nhọn để điều khiển luồng chương trình, nó sử dụng **thụt đầu dòng**. Bạn bắt buộc phảu sử dụng thụt đầu dòng nếu bạn sử dụng `for`, `while`, `if`.
 
 ```python
 import os
+
 files = os.listdir()
 for file in files:
     if file.endswith(".txt"):
         print(file)
 ```
 
-Save this in `file.py`. Create 2-3 .txt files. `touch file{1,2,3,4,5}.txt` will create file1.txt, file2.txt till file5.txt, but it works only on Linux or Mac.
+Lưu đoạn mã trên vào `file.py`. Tạo 2-3 tập tin .txt. `touch file{1,2,3,4,5}.txt` sẽ tạo các tập tin tên file1.txt, file2.txt till file5.txt, nhưng chỉ làm việc trên Linux hoặc Mac.
 
-After saving `file.py`, execute the program by typing `python3 file.py`
+Sau khi lưu tập tin `file.py`, thực thi chương trình bằng lệnh `python3 file.py`
 
-###### Note:
-If you get an error saying that python3 wasn't found, then type `python --version`, if it is 3 or above then just type `python file.py`. Because in that case, you have Python3 installed and calling python will call python3.
+###### Lưu ý:
+Nếu bạn nhận được một lỗi là không tìm thấy python3, gõ `python --version`, nếu nó là 3 hoặc cao hơn bạn chỉ cần gõ `python file.py`, bởi vì trong trường hợp này, bạn đã cài đặt Python3 và gọi python sẽ là gọi python3.
 
-If everything went well, you should see this as the output:
+Nếu mọi thứ đều ổn bạn sẽ thấy các đầu ra như sau:
 
 ```
 file1.txt
@@ -54,12 +55,12 @@ file4.txt
 file5.txt
 ```
 
-This is the beauty of the language, its syntax is very easy to understand and that's the reason the language is very powerful.
+Đây là một ngôn ngữ đẹp, cú pháp của nó rất dễ hiểu và đó là lí do tại sao nó hết sức mạnh mẽ.
 
-If you want to list all the .txt files, you can use the unix utility `ls`, `ls *.txt`. We saw here, how to implement one feature of the `ls` utility in less than 5 lines. This is the power of Python.
+Nếu bạn muốn liệt kê tất cả các tập tin .txt, bạn có thể sử dụng các công cụ trên hệ thống unix như `ls`, `ls *.txt`. Như ở đây, chúng ta thực hiện một tính năng của lệnh `ls` với ít hơn 5 dòng mã. Đây chính là sức mạnh của Python.
 
-## Using glob
-There is a stdlib module which allows you to have advanced features which don't so that you don't have to check the extension of the file yourself.
+## Sử dụng glob
+Có một mô-đun stdlib cho phép chúng ta có những tính năng nâng cao như không cần phải kiểm tra phần mở rộng của tập tin nữa.
 
 ```python
 >>> import glob
@@ -68,14 +69,14 @@ There is a stdlib module which allows you to have advanced features which don't 
 ['file1.txt', 'file2.txt', 'file3.txt', 'file4.txt', 'file5.txt']
  ```
 
-The `glob` method does a regular expression match on the current directory.
+Phương thức `glob` là một biểu thức chính quy trên các thư mục hiện hành.
 
-As you advance your knowledge in Python, you'll feel the need to use as many stdlib functions as you can so as to reduce code duplication.
+Khi bạn đã có nhiều kiến thức trong Python, bạn sẽ cảm thấy cần sử dụng nhiều các chức nặng stdlib để giảm sự trùng lặp mã.
 
-Exercise:
+Bài tập:
 
-1. Write a program to print all `*.csv` files, create multiple `.csv` files first, without using glob.
-1. Install ipython using easy_install or pip. Be careful about the version of pip you use.
+1. Viết một chương trình in ra tất cả các tập tin `*.csv`, tạo các tập tin `.csv` trước và không sử dụng glob.
+1. Cài đặt ipython sử dụng easy_install hoặc pip. Lưu ý về version của pip mà bạn sử dụng.
 
 ##### Links
 
